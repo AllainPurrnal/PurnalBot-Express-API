@@ -18,7 +18,6 @@ mongoose.connect(db, { useCreateIndex: true, useUnifiedTopology: true, useNewUrl
 // Use routes
 app.use('/api/reports', require('./routes/api/reports'));
 app.use('/api/users', require('./routes/api/users'));
-// app.use('/api/games', require('./routes/api/games'));
 
 const port = process.env.PORT || 3000
 

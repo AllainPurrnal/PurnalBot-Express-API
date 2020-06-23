@@ -9,7 +9,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  library: {
+  platform: {
     type: Array,
     required: false
   },
@@ -17,6 +17,6 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true
   }
-})
+});
 
-module.exports = mongoose.model("User", userSchema)
+module.exports = mongoose.model("User", userSchema);

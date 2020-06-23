@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   Report.find({resolved: {$eq: false}})
     .sort({ date: 1 }) // 1 = Ascending/False, -1 = Descending/True
     .then(reports => {
-      console.log(reports)
+      // console.log(reports)
       res.json(reports)
     })
 });
