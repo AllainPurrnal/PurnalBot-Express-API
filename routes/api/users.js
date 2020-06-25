@@ -9,7 +9,6 @@ const User = require('../../models/User');
 // @access  Private
 router.get('/', (req, res, next) => {
   // if the req has a discordId attached, move to next router
-  console.log(req.query.discordId)
   if (req.query.discordId) return next();
 
   // console.log(`First GET`)
@@ -74,7 +73,7 @@ router.put('/', (req, res) => {
     }
   )
   .then(user => {
-    console.log(`Success pushing to User.Platform`)
+    console.log(`Success pushing to User.Platform\n${user.data}`)
     res.send(user)
   })
   .catch(err => console.log(`Failed`, err))
